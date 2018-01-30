@@ -1,0 +1,33 @@
+# Simple Linear Regression
+
+# Importing Libraries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+#Importing datasets
+dataset = pd.read_csv("C:/Users/Sushant Singh/Desktop/Udemy_ML/Machine Learning A-Z Template Folder/Part 2 - Regression/Section 4 - Simple Linear Regression/Salary_Data.csv")
+#Independent Variable
+X = dataset.iloc[:,:-1].values #Include all columns except last one. 
+#Dependent Variable
+Y = dataset.iloc[:,1].values
+
+#Spliting data into test, train sets
+
+from sklearn.cross_validation import train_test_split
+X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size=1/3, random_state=0)
+
+
+
+#Feature Scaling
+'''from sklearn.preprocessing import StandardScaler
+sc_X = StandardScaler()
+X_train = sc_X.fit_transform(X_train)
+X_test = sc_X.fit_transform(X_test)
+sc_Y = StandardScaler()
+Y_train = sc_Y.fit_transform(Y_train)'''
+
+#Fitting Simple Linear Regression into training set
+from sklearn.linear_model import LinearRegression
+regressor = LinearRegression()
+regressor.fit(X_train, Y_train)
