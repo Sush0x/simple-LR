@@ -12,12 +12,13 @@ X = dataset.iloc[:,:-1].values #Include all columns except last one.
 #Dependent Variable
 Y = dataset.iloc[:,1].values
 
+-----------------------------------------------------------------------------------------------------------------------------------------
 #Spliting data into test, train sets
 
 from sklearn.cross_validation import train_test_split
 X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size=1/3, random_state=0)
 
-
+----------------------------------------------------------------------------------------------------------------------------------------
 
 #Feature Scaling - Optional/Not necessary every time
 '''from sklearn.preprocessing import StandardScaler
@@ -26,8 +27,37 @@ X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.fit_transform(X_test)
 sc_Y = StandardScaler()
 Y_train = sc_Y.fit_transform(Y_train)'''
-
+----------------------------------------------------------------------------------------------------------------------------------------
 #Fitting Simple Linear Regression into training set
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 regressor.fit(X_train, Y_train)
+----------------------------------------------------------------------------------------------------------------------------------------
+#Predicting the test set result
+Y_pred = regressor.predict(X_test)
+
+#We will compare the y_test(Actual salary) and y_pred(Predicted salary by model) -- This will give how efficient our model is
+#We will consider the changes between y_test and y_pred
+----------------------------------------------------------------------------------------------------------------------------------------
+#Visualizing the training set results
+
+plt.scatter(X_train, Y_train, color='red')
+plt.scatter(X_train, regressor.predict(X_train), color='blue')
+plt.ylabel("Salary")
+plt.xlabel("Years of Experience -->")
+plt.title("Salary vs Experience(Training set)")
+plt.show()
+----------------------------------------------------------------------------------------------------------------------------------------
+#Visualizing the test set results
+
+plt.scatter(X_test, Y_test, color='red')
+plt.scatter(X_train, regressor.predict(X_train), color='blue') // we will keep it same bcz blue line is already trained
+plt.ylabel("Salary")
+plt.xlabel("Years of Experience -->")
+plt.title("Salary vs Experience(Test set)")
+plt.show()
+
+
+
+
+
