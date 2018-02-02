@@ -1,1 +1,10 @@
+#Multiple Linear Regression
+
+#Data is about 50 startup companies investing in the different sectors to gain profit
+
+#Data -  R&D Spend | Administration | Marketing Spend | State      | Profit
+#         165324.2    132456.7         459875.8         California   191226.9
+
+
+
 
