@@ -1,5 +1,5 @@
 # Simple Linear Regression
-#Theory  - y = b0 + b1*x1
+# Theory  - y(Salary) = b0 + b1*x1(Years of experience)
 
 # Importing Libraries
 import numpy as np
