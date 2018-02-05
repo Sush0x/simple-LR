@@ -1,9 +1,21 @@
 #Multiple Linear Regression
+#Theory  - y(Profit) = b0 + b1*x1(R&D Spend) + b2*x2(Administration)+....+ bn*xn
 
 #Data is about 50 startup companies investing in the different sectors to gain profit
+#Idea is to determine which investment leads to high profit or may be which city is good to invest - "California" or "New York"
 
 #Data -  R&D Spend | Administration | Marketing Spend | State      | Profit
 #         165324.2    132456.7         459875.8         California   191226.9
+
+#Intuition #1 - 
+#Intuition #3 - 
+
+#Import Libraries
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
 
 
 
