@@ -10,6 +10,30 @@
 #Intuition #1 - 
 #Intuition #3 - 
 
+#Intuition #4 - DUmmy varialble for categorical data
+ | State   |             |  New York(D1) |  California(D2) |      
+ California      }----->      0           1
+ New York        }            1           0
+ 
+# Dummy Variable Trap - D2 = D1 - 1  therefore we don't keep b0 , D1 and D2 at same time in equation hence remove one Dummy variable in the eqn.
+
+# p - value => used in null hypothesis 
+
+u = assumed mean = 20 ounces
+u' = calc. mean  = 22 ounces
+sigma = variance , n = total number of observation
+
+H0(Null hypothesis) => u = 20
+H1(Alternate hypothesis) => u > 20
+
+#p-value is calculated -
+  z = (u' - u) / (sigma/sqrt(n))
+  
+ we calculate P(Z) - probibility at Z = <3>
+ P = .0013 
+ here P <0.05 therefore weak evidence hence we neglect the null hypothesis, hence u = 20 is not significant.
+ 
+ 
 #Import Libraries
 
 import numpy as np
