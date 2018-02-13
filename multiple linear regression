@@ -6,7 +6,7 @@
 
 #Data -  R&D Spend | Administration | Marketing Spend | State      | Profit
 #         165324.2    132456.7         459875.8         California   191226.9
-
+------------------------------------------------------------------------------------------------------------------------------------------
 #Intuition #1 - 
 #Intuition #3 - 
 
@@ -16,7 +16,7 @@
  New York        }            1           0
  
 # Dummy Variable Trap - D2 = D1 - 1  therefore we don't keep b0 , D1 and D2 at same time in equation hence remove one Dummy variable in the eqn.
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 # p - value => used in null hypothesis 
 
 u = assumed mean = 20 ounces
@@ -32,14 +32,27 @@ H1(Alternate hypothesis) => u > 20
  we calculate P(Z) - probibility at Z = <3>
  P = .0013 
  here P <0.05 therefore weak evidence hence we neglect the null hypothesis, hence u = 20 is not significant.
- 
- 
+ -----------------------------------------------------------------------------------------------------------------------------------------
+#5 methods of building model ----
+
+1.all-in -- Use all (Used when u have prior knowlege | you have to use | preparing for Backward elimination )
+2.Backward elimination --
+
+*Select a significance level s= 0.05
+*Fit the full model/ take all columns
+*predict the p-value for each , if p-value > s go to step 4
+*remove that column
+*
+
+3.Forward Selection
+4.Bidirectional elimination
+5.Score comparison
+-----------------------------------------------------------------------------------------------------------------------------------------
 #Import Libraries
 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-
 
 
 
