@@ -88,14 +88,15 @@ from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 regressor.fit(X_train, X_train)
 
+Y_pred = regressor.predict(X_test)
 
-
-
-
-
-
+#take the two tables Y_test and Y_pred and observe if the given values and the predicted values are close or not.
 
 -----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+#Optional-- 
 
 #Feature Scaling - Optional/Not necessary every time
 '''from sklearn.preprocessing import StandardScaler
