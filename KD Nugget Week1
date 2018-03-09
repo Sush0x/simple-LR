@@ -1,0 +1,6 @@
+#Linear Regression on Train and Test data-------------------------------------
+
+def LoadDataset(data_str):
+     data= pd.read_csv(data_str).dropna()
+     
+
